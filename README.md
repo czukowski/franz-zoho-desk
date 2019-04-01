@@ -7,9 +7,8 @@ For now, it will only display a badge with a number of notifications.
 
 Improvements considered:
 
- 1. Display a badge for indirect notifications when there are tickets labeled 'new' in the current view.
- 2. Customize a display of desktop notifications from Zoho Desk.
- 3. Do something about the icons (the PNG does not meet the recommended size and there's no SVG icon).
+ 1. Customize a display of desktop notifications from Zoho Desk.
+ 2. Do something about the icons (the PNG does not meet the recommended size and there's no SVG icon).
 
 Installation
 ------------

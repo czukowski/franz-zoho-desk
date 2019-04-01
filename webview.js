@@ -1,13 +1,21 @@
 module.exports = (Franz) => {
-    function getNotifications() {
+    function getNotificationsCount() {
         const badgeCountElement = document.querySelector('#fbadgecnt');
         if (badgeCountElement !== null) {
-            const notifications = parseInt(badgeCountElement.innerHTML);
-            Franz.setBadge(notifications);
+            return parseInt(badgeCountElement.innerHTML);
         }
+        return 0;
     }
 
-    Franz.loop(getNotifications);
+    function getNewTicketsCount() {
+        return document.querySelectorAll('#list_view_Cases .tag-style[name^=new_]').length;
+    }
+
+    function updateBadges() {
+        Franz.setBadge(getNotificationsCount(), getNewTicketsCount());
+    }
+
+    Franz.loop(updateBadges);
 
     Franz.onNotify(notification => {
         console.log(notification);
