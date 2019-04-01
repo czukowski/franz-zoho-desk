@@ -1,0 +1,13 @@
+{
+    "id": "franz-zoho-desk",
+    "name": "Zoho Desk",
+    "version": "1.0.0",
+    "description": "Zoho Desk recipe for Franz",
+    "main": "index.js",
+    "author": "czukowski",
+    "license": "MIT",
+    "repository": "https://github.com/czukowski/franz-zoho-desk",
+    "config": {
+        "serviceURL": "https://accounts.zoho.com/signin?servicename=ZohoSupport&signupurl=https://www.zoho.com/desk/signup.html"
+    }
+}
