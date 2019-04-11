@@ -3,7 +3,8 @@ Zoho Desk integration for Franz
 
 This is a development version.
 
-For now, it will only display a badge with a number of notifications.
+It will display a badge with a number of notifications, an 'indirect notification' badge if there are new tickets in the
+current view, as well as desktop notifications.
 
 Improvements considered:
 
