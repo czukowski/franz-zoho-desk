@@ -1,10 +1,15 @@
 module.exports = (Franz) => {
     function getNotificationsCount() {
+        let counted = 0;
         const badgeCountElement = document.querySelector('#fbadgecnt');
-        if (badgeCountElement !== null) {
-            return parseInt(badgeCountElement.innerHTML);
+        const emailFailureExlamationElement = document.querySelector('#email_failure_noti');
+        if (emailFailureExlamationElement !== null && emailFailureExlamationElement.offsetParent !== null) {
+            counted += 1;
         }
-        return 0;
+        if (badgeCountElement !== null) {
+            return counted += parseInt(badgeCountElement.innerHTML);
+        }
+        return counted;
     }
 
     function getNewTicketsCount() {
