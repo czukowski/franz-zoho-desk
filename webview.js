@@ -1,19 +1,19 @@
 module.exports = (Franz) => {
     function getNotificationsCount() {
         let counted = 0;
-        const badgeCountElement = document.querySelector('#fbadgecnt');
+        const badgeCountElement = document.querySelector('.zd-topbaricon-count');
         const emailFailureExlamationElement = document.querySelector('#email_failure_noti');
         if (emailFailureExlamationElement !== null && emailFailureExlamationElement.offsetParent !== null) {
             counted += 1;
         }
         if (badgeCountElement !== null) {
-            return counted += parseInt(badgeCountElement.innerHTML);
+            counted += parseInt(badgeCountElement.innerHTML);
         }
         return counted;
     }
 
     function getNewTicketsCount() {
-        return document.querySelectorAll('#list_view_Cases .tag-style[name^=new_]').length;
+        return document.querySelectorAll('.zd-dotnew-container').length;
     }
 
     function updateBadges() {
